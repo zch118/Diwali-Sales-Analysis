@@ -12,6 +12,30 @@
 - 高价值客户有哪些
 - 最终输出可交互的 Dashboard 供运营团队使用
 
+## 文件结构
+
+```
+Diwali-Sales-Analysis/
+├── README.md
+├── data/
+│   ├── raw_diwali_sales.csv      # 原始数据
+│   └── clean_diwali_sales.csv    # 清洗后数据
+├── sql/
+│   ├── 01_data_cleaning.sql      # 数据清洗脚本
+│   └── 02_analysis_queries.sql   # 业务分析查询
+├── python/
+│   └── diwali_eda_analysis.ipynb # EDA notebook
+├── excel/
+│   └── Diwali_Sales_Dashboard.xlsx
+├── powerbi/
+│   └── Diwali_Sales_Dashboard.pbix
+└── images/
+    ├── excel_dashboard.png
+    ├── powerbi_dashboard.png
+    ├── powerbi_page2.png
+    └── powerbi_page3.png
+```
+
 ## 技术栈
 
 - MySQL 8.0 — 数据清洗 + 业务查询
@@ -71,15 +95,6 @@
 - 对接清洗后的 MySQL 数据表
 - 基于业务 KPI 制作可视化图表
 - 配色采用蓝橙系，与官方版本区分
-
-## Python 分析要点
-
-- 读取 CSV 时指定 encoding='unicode_escape'，解决印度文字符编码问题
-- 删除空列和空值后，用 drop_duplicates 按多列去重
-- 性别、婚姻状态字段用 map 做值替换
-- 年龄段分析固定 x 轴顺序，避免默认字母排序导致图表混乱
-- 职业和州用横向条形图，标签长时更易读
-- 输出清洗后的干净数据集，供 SQL 和 BI 工具直接使用
 
 ## SQL 分析要点
 
@@ -153,27 +168,6 @@ WHERE sales_rank <= 10;
 - 食品品类卖得最好（32%），服装、鞋类、电子构成第二梯队
 - 核心客户画像：26-35 岁、未婚、IT/医疗/航空行业、来自中部或南部的女性
 
-## 文件结构
-
-```
-Diwali-Sales-Analysis/
-├── README.md
-├── data/
-│   ├── raw_diwali_sales.csv      # 原始数据
-│   └── clean_diwali_sales.csv    # 清洗后数据
-├── sql/
-│   ├── 01_data_cleaning.sql      # 数据清洗脚本
-│   └── 02_analysis_queries.sql   # 业务分析查询
-├── python/
-│   └── diwali_eda_analysis.ipynb # EDA notebook
-├── excel/
-│   └── Diwali_Sales_Dashboard.xlsx
-├── powerbi/
-│   └── Diwali_Sales_Dashboard.pbix
-└── images/
-    └── Dashboard.png
-```
-
 ## 怎么运行
 
 SQL：创建 diwali 数据库，用 DataGrip 导入 raw_diwali_sales.csv（编码选 windows-1252），依次执行 01_data_cleaning.sql 和 02_analysis_queries.sql。
@@ -183,5 +177,3 @@ Python：pip install pandas matplotlib seaborn，用 Jupyter 打开 python/diwal
 Excel：直接打开 excel/Diwali_Sales_Dashboard.xlsx，切到 dashboard 工作表点切片器筛选。
 
 Power BI：打开 powerbi/Diwali_Sales_Dashboard.pbix，转换数据 → 数据源设置 → 连接自己的 MySQL 或 CSV。
-
-
