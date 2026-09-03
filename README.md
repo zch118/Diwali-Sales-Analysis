@@ -114,6 +114,8 @@ WHERE sales_rank <= 10;
 
 ## Power BI 看板功能
 
+![Power BI Dashboard](images/powerbi_dashboard.png)
+
 - 销售概览页：KPI 卡片（总销售额、总订单、客户数、客单价）+ 性别占比环形图 + 年龄段柱形图
 - 客户分析页：职业 Top10 条形图 + 婚姻状态 x 性别柱形图 + Top5 客户表
 - 品类分析页：品类销售额条形图 + 州 Top10 条形图 + 区域分布
@@ -121,6 +123,8 @@ WHERE sales_rank <= 10;
 - 数据来源：直接连接 MySQL 的 diwali_sales_data 表，支持刷新
 
 ## Excel Dashboard 说明
+
+![Excel Dashboard](images/excel_dashboard.png)
 
 打开 `excel/Diwali_Sales_Dashboard.xlsx`，切换到 dashboard 工作表：
 - 顶部三个 KPI 卡片显示核心指标
@@ -169,3 +173,4 @@ Python：pip install pandas matplotlib seaborn，用 Jupyter 打开 python/diwal
 Excel：直接打开 excel/Diwali_Sales_Dashboard.xlsx，切到 dashboard 工作表点切片器筛选。
 
 Power BI：打开 powerbi/Diwali_Sales_Dashboard.pbix，转换数据 → 数据源设置 → 连接自己的 MySQL 或 CSV。
+
