@@ -114,7 +114,17 @@ WHERE sales_rank <= 10;
 
 ## Power BI 看板功能
 
-![Power BI Dashboard](images/powerbi_dashboard.png)
+**销售概览页**
+
+![Power BI 销售概览](images/powerbi_dashboard.png)
+
+**客户分析页**
+
+![Power BI 客户分析](images/powerbi_page2.png)
+
+**品类分析页**
+
+![Power BI 品类分析](images/powerbi_page3.png)
 
 - 销售概览页：KPI 卡片（总销售额、总订单、客户数、客单价）+ 性别占比环形图 + 年龄段柱形图
 - 客户分析页：职业 Top10 条形图 + 婚姻状态 x 性别柱形图 + Top5 客户表
@@ -173,4 +183,5 @@ Python：pip install pandas matplotlib seaborn，用 Jupyter 打开 python/diwal
 Excel：直接打开 excel/Diwali_Sales_Dashboard.xlsx，切到 dashboard 工作表点切片器筛选。
 
 Power BI：打开 powerbi/Diwali_Sales_Dashboard.pbix，转换数据 → 数据源设置 → 连接自己的 MySQL 或 CSV。
+
 
