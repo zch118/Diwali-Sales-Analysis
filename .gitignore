@@ -1,0 +1,17 @@
+﻿# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# 临时文件
+*.tmp
+*.bak
+*_原始备份.*
